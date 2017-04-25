@@ -1,5 +1,5 @@
-# find returns an iterator to all matching
-# nets. The value is a tuple: name, netinfo
+# find devuleve un iterador para los nombres de red
+# coincidentes. Devuelve una tupla: nombre, info
 clknet = nets.find("/clk").value()[1]
 clkclass = clknet.GetNetClass()
 

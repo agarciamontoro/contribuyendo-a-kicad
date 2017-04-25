@@ -1,6 +1,6 @@
-# returns a dictionary netcode:netinfo_item
+# Devuelve un diccionario código:info
 netcodes = board.GetNetsByNetcode()
 
-# list off all of the nets in the board.
+# Itera sobre todas las redes en la placa
 for netcode, net in netcodes.items():
-    # Where the cool stuff should go
+    # Magia negra

@@ -1,4 +1,4 @@
 import pcbnew
 
-# most queries start with a board
+# Objeto para manejar la placa
 board = pcbnew.GetBoard()

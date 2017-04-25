@@ -5,18 +5,22 @@
 \framecard{COMUNIDAD DE KICAD}
 
 \begin{frame}{Comunidad de Kicad}
+	\begin{center}
+	\begin{minipage}{0.7\textwidth}
 	\begin{fullpageitemize}
-		\item[\faCode] Launchpad: \href{https://launchpad.net/kicad}{launchpad.net/kicad}
+		\item[\faCode] Launchpad: \href{https://launchpad.net/kicad}{launchpad.net/kicad} \\
 		\pause
-		\item[\faEnvelope] Lista de correo: \href{http://lists.launchpad.net/kicad-developers}{kicad-developers}
+		\item[\faEnvelope] Lista de correo: \href{http://lists.launchpad.net/kicad-developers}{kicad-developers} \\
 		\pause
-		\item[\faHashtag] IRC: \#kicad
+		\item[\faHashtag] IRC: \#kicad \\
 		\pause
-		\item[\faUsers] Foro: \href{https://forum.kicad.info/}{forum.kicad.info}
+		\item[\faUsers] Foro: \href{https://forum.kicad.info/}{forum.kicad.info} \\
 		\pause
 		\item[\faGithub] Github: \href{https://github.com/kicad/}{github.com/kicad/}
 	\end{fullpageitemize}
-\end{frame}
+	\end{minipage}
+	\end{center}
+\end{frame} 
 
 \framecard{CÓMO COMPILAR}
 
@@ -84,6 +88,72 @@
 	\inputminted{cpp}{code/cpp/tool_transitions_interactive.cpp}
 \end{minipage}
 \end{center}
+\end{frame}
+
+\begin{frame}{Nuevas herramientas}{¿Cómo registrar la nueva herramienta?}
+	\begin{center}
+	\begin{minipage}{0.8\textwidth}
+		\begin{itemize}
+			\pause
+			\item[\faCode] Añadir la cabecera a \mintinline{shell}{pcbnew/CMakeLists.txt}
+			\pause
+			\item[\faCode] Registrar la nueva herramienta en \mintinline{shell}{pcbnew/tools/tools_common.cpp}
+			\pause
+		\end{itemize}
+	\end{minipage}
+	\end{center}
+
+	\begin{center}
+		\begin{minipage}{0.95\textwidth}
+			\inputminted[fontsize=\small]{cpp}{code/cpp/register_tool.cpp}
+		\end{minipage}
+	\end{center}
+\end{frame}
+
+\framecard{\href{http://docs.kicad-pcb.org/doxygen/classEDA__ITEM.html}{CLASES DEL MODELO}}
+
+\framecard{\href{http://docs.kicad-pcb.org/doxygen/classPCB__BASE__FRAME.html}{CLASES DE LA VISTA}}
+
+\framecard{MAGIA NEGRA}
+
+\begin{frame}
+	\begin{center}
+	\begin{minipage}{0.7\textwidth}
+		\inputminted[fontsize=\large]{cpp}{code/cpp/commit.cpp}
+	\end{minipage}
+\end{center}
+\end{frame}
+
+\framecard{INTERACCIÓN}
+
+\begin{frame}{Interacción con otras herramientas}
+\begin{center}
+	\begin{minipage}{0.7\textwidth}
+		\only<1>{\inputminted[firstline=1, lastline=7, fontsize=\large]{cpp}{code/cpp/tool_action.cpp}}
+		\only<2>{\inputminted[firstline=9, lastline=12, fontsize=\large]{cpp}{code/cpp/tool_action.cpp}}
+		\only<3>{\inputminted[firstline=14, lastline=17, fontsize=\large]{cpp}{code/cpp/tool_action.cpp}}
+	\end{minipage}
+\end{center}
+\end{frame}
+
+\framecard{ENVIAR CONTRIBUCIONES}
+
+\begin{frame}{¿Cómo enviar una contribución?}
+		\begin{center}
+		\begin{minipage}{0.8\textwidth}
+			\begin{fullpageitemize}
+				\item[\faCode] \mintinline{shell}{git clone https://git.launchpad.net/kicad} \\
+				\pause
+				\item[\faCode] \mintinline{shell}{Code all day long} \\
+				\pause
+				\item[\faCode] \mintinline{shell}{git add magic_code.cpp} \\
+				\pause
+				\item[\faCode] \mintinline{shell}{git commit -m "Black magic"} \\
+				\pause
+				\item[\faCode] \mintinline{shell}{git format-patch --attach origin/master}
+			\end{fullpageitemize}
+		\end{minipage}
+	\end{center}	
 \end{frame}
 
 \framecard{C++ MOLA}
